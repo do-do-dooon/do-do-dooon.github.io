@@ -1,0 +1,157 @@
+/* =========================
+   CSS Variables
+========================= */
+:root {
+  --base: #EEEEEE;
+  --sub: #31998F;
+  --text-main: #09161F;
+  --text-sub: #999999;
+  --accent: #88D1FF;
+
+  --content-width: 1080px;
+
+  --space-s: 16px;
+  --space-m: 24px;
+  --space-l: 32px;
+  --space-xl: 80px;
+  --space-xxl: 120px;
+}
+
+/* =========================
+   Reset & Base
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--base);
+  color: var(--text-main);
+  font-family: "Segoe UI", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   Typography
+========================= */
+h1, h2, h3 {
+  font-family: "Eras Light ITC", "Eras ITC", "Segoe UI", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  font-size: clamp(48px, 6vw, 64px);
+  margin-bottom: var(--space-l);
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 40px);
+  margin-bottom: var(--space-m);
+}
+
+h3 {
+  font-size: clamp(20px, 3vw, 24px);
+  margin-bottom: var(--space-s);
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-main);
+  margin-bottom: var(--space-m);
+}
+
+small {
+  font-size: 13px;
+  color: var(--text-sub);
+}
+
+/* =========================
+   Layout
+========================= */
+.page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-m);
+}
+
+.section {
+  margin-bottom: var(--space-xxl);
+}
+
+/* =========================
+   Links
+========================= */
+a {
+  color: var(--text-main);
+  text-decoration: underline;
+  transition: opacity 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   Audio Player
+========================= */
+audio {
+  width: 100%;
+  margin-top: var(--space-m);
+}
+
+/* =========================
+   Animations
+========================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Page transition */
+.fade-page {
+  animation: pageFade 0.6s ease;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hover transparency (global) */
+button:hover,
+.btn:hover,
+audio:hover {
+  opacity: 0.85;
+}
