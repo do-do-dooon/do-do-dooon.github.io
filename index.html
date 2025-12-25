@@ -3,39 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Composer Portfolio</title>
-
-  <!-- CSS -->
+  <title>dooon | Composer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- Fade wrapper -->
-  <main class="page fade-page">
+  <!-- Background -->
+  <div class="background"></div>
 
-    <section class="section fade-in">
-      <h1>Composer Portfolio</h1>
-      <p>
-        作曲・編曲を中心に活動しています。  
-        音楽と映像、空間の関係性を重視した制作を行っています。
-      </p>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#dooon">dooon</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#discography">Discography</a></li>
+      <li><a href="#text">Text</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-      <a href="#works" class="btn">View Works</a>
+  <!-- Main Content -->
+  <main class="content">
+
+    <!-- dooon / Works -->
+    <section id="dooon" class="section fade-in">
+      <h1>dooon</h1>
+      <div class="grid">
+        <!-- 001 - 050 -->
+        <!-- 仮配置 -->
+        <!-- 必要なら後で audio / link を入れる -->
+        <!-- 50個 -->
+        <!-- ↓ 自動生成ではなく明示的に書いています -->
+        <div class="item">001</div>
+        <div class="item">002</div>
+        <div class="item">003</div>
+        <div class="item">004</div>
+        <div class="item">005</div>
+        <div class="item">006</div>
+        <div class="item">007</div>
+        <div class="item">008</div>
+        <div class="item">009</div>
+        <div class="item">010</div>
+
+        <div class="item">011</div>
+        <div class="item">012</div>
+        <div class="item">013</div>
+        <div class="item">014</div>
+        <div class="item">015</div>
+        <div class="item">016</div>
+        <div class="item">017</div>
+        <div class="item">018</div>
+        <div class="item">019</div>
+        <div class="item">020</div>
+
+        <div class="item">021</div>
+        <div class="item">022</div>
+        <div class="item">023</div>
+        <div class="item">024</div>
+        <div class="item">025</div>
+        <div class="item">026</div>
+        <div class="item">027</div>
+        <div class="item">028</div>
+        <div class="item">029</div>
+        <div class="item">030</div>
+
+        <div class="item">031</div>
+        <div class="item">032</div>
+        <div class="item">033</div>
+        <div class="item">034</div>
+        <div class="item">035</div>
+        <div class="item">036</div>
+        <div class="item">037</div>
+        <div class="item">038</div>
+        <div class="item">039</div>
+        <div class="item">040</div>
+
+        <div class="item">041</div>
+        <div class="item">042</div>
+        <div class="item">043</div>
+        <div class="item">044</div>
+        <div class="item">045</div>
+        <div class="item">046</div>
+        <div class="item">047</div>
+        <div class="item">048</div>
+        <div class="item">049</div>
+        <div class="item">050</div>
+      </div>
     </section>
 
-    <section class="section fade-in" id="works">
-      <h2>Works</h2>
+    <!-- About -->
+    <section id="about" class="section fade-in">
+      <h2>About</h2>
+      <p>
+        Composer / Arranger.  
+        音楽と空間、映像との関係性を意識した制作を行っています。
+      </p>
+    </section>
 
-      <audio controls>
-        <source src="sample.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+    <!-- Discography -->
+    <section id="discography" class="section fade-in">
+      <h2>Discography</h2>
+      <div class="grid">
+        <div class="item">Album 01</div>
+        <div class="item">Album 02</div>
+        <div class="item">Album 03</div>
+      </div>
+    </section>
+
+    <!-- Text -->
+    <section id="text" class="section fade-in">
+      <h2>Text</h2>
+      <p>
+        制作に関する考えや、音楽についてのテキストを掲載します。
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section fade-in">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:example@example.com">example@example.com</a>
+      </p>
     </section>
 
   </main>
 
-  <!-- Scroll Fade Script -->
+  <!-- Scroll Fade -->
   <script>
     const targets = document.querySelectorAll('.fade-in');
 
@@ -45,9 +139,7 @@
           entry.target.classList.add('visible');
         }
       });
-    }, {
-      threshold: 0.2
-    });
+    }, { threshold: 0.15 });
 
     targets.forEach(target => observer.observe(target));
   </script>
