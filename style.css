@@ -155,3 +155,89 @@ button:hover,
 audio:hover {
   opacity: 0.85;
 }
+
+/* =========================
+   Background
+========================= */
+.background {
+  position: fixed;
+  inset: 0;
+  background: url("back.jpg") center / cover no-repeat;
+  opacity: 0.12;
+  z-index: -1;
+}
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100vh;
+  padding: 80px 24px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 24px;
+}
+
+.sidebar a {
+  font-family: "Eras Light ITC", "Eras ITC", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+}
+
+/* =========================
+   Main Content Layout
+========================= */
+.content {
+  margin-left: 200px;
+  max-width: 1100px;
+  padding: 80px 32px;
+}
+
+/* =========================
+   Grid Layout
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Eras Light ITC", "Eras ITC", sans-serif;
+  letter-spacing: 0.1em;
+  transition: opacity 0.3s ease;
+}
+
+.item:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   Fade In (Override)
+========================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
