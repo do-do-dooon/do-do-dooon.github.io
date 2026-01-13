@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julian Thorne | Composer for Film & Performance</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#a2bae9",
+            "background-light": "#f6f7f8",
+            "background-dark": "#13171f",
+            "dark-blue": "#000C19"
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    .nav-link {
+      text-decoration: underline;
+      transition: opacity 0.3s ease;
+    }
+    .nav-link:hover {
+      text-decoration: none;
+      opacity: 0.2;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <!-- ★ ここを相対パスに変更 -->
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-dark-blue dark:text-white font-sans antialiased">
+  <div id="root"></div>
+
+  <!-- ★ ここを相対パスに変更 -->
+  <script type="module" src="./src/index.tsx"></script>
+</body>
+</html>
